@@ -55,6 +55,7 @@ final class GalleryViewModel: ViewModel {
         case .success(let model):
             self.updateState(.success(model))
         case .failure(let failure):
+            print(failure.localizedDescription)
             self.updateState(.failure)
         }
     }
